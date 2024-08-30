@@ -20,7 +20,8 @@ def create_user_details(
         create_status = create_user(request,db)
         if create_status:
             return {"status": 201,
-                    "message":"user created succesfully"}
+                    "message":"user created succesfully",
+                    "data" : create_status}
     except Exception as e:
         raise HTTPException(detail=e,status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
