@@ -2,7 +2,7 @@ from fastapi import APIRouter,Depends,HTTPException,status
 
 from schemas import UserDetailCreate
 from db import get_session
-from services import create_user
+from .services import create_user
 
 
 user_rout = APIRouter()
